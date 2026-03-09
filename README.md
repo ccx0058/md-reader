@@ -35,7 +35,10 @@
 
 ### 下载安装
 
-从 [Releases](https://github.com/yourusername/md-reader/releases) 页面下载最新版本。
+从 [Releases](https://github.com/ccx0058/md-reader/releases) 页面下载最新版本。
+
+**Windows 用户直接下载：**
+- [md-reader-windows-amd64.exe](https://github.com/ccx0058/md-reader/releases/download/v1.0.0/md-reader-windows-amd64.exe)
 
 ### 从源码编译
 
@@ -216,8 +219,8 @@ md-reader/
 ## 📮 联系方式
 
 如有问题或建议，请通过以下方式联系：
-- 提交 [Issue](https://github.com/yourusername/md-reader/issues)
-- 发送邮件至 your.email@example.com
+- 提交 [Issue](https://github.com/ccx0058/md-reader/issues)
+- 发送邮件至 ccx0058@163.com
 
 ---
 
