@@ -1,0 +1,140 @@
+/* Notepad++ 风格主题 - 亮色 */
+[data-theme="notepad++"][data-mode="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f0f0f0;
+    --bg-tertiary: #e0e0e0;
+    --text-primary: #000000;
+    --text-secondary: #555555;
+    --text-muted: #888888;
+    --border-color: #cccccc;
+    --accent-color: #000080;
+    --code-bg: #fffbf0;
+    --blockquote-border: #000080;
+    --link-color: #0000ff;
+}
+
+/* Notepad++ 风格主题 - 暗色 */
+[data-theme="notepad++"][data-mode="dark"] {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #2d2d30;
+    --bg-tertiary: #3e3e42;
+    --text-primary: #d4d4d4;
+    --text-secondary: #9cdcfe;
+    --text-muted: #6a9955;
+    --border-color: #3e3e42;
+    --accent-color: #569cd6;
+    --code-bg: #1e1e1e;
+    --blockquote-border: #569cd6;
+    --link-color: #569cd6;
+}
+
+/* Markdown 内容样式 */
+[data-theme="notepad++"] .markdown-body {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-primary);
+}
+
+[data-theme="notepad++"] .markdown-body h1,
+[data-theme="notepad++"] .markdown-body h2,
+[data-theme="notepad++"] .markdown-body h3,
+[data-theme="notepad++"] .markdown-body h4,
+[data-theme="notepad++"] .markdown-body h5,
+[data-theme="notepad++"] .markdown-body h6 {
+    font-weight: bold;
+    color: var(--text-primary);
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+[data-theme="notepad++"] .markdown-body h1 { font-size: 1.8em; border-bottom: 2px solid var(--border-color); padding-bottom: 0.3em; }
+[data-theme="notepad++"] .markdown-body h2 { font-size: 1.5em; border-bottom: 1px solid var(--border-color); padding-bottom: 0.2em; }
+[data-theme="notepad++"] .markdown-body h3 { font-size: 1.25em; }
+[data-theme="notepad++"] .markdown-body h4 { font-size: 1.1em; }
+[data-theme="notepad++"] .markdown-body h5 { font-size: 1em; }
+[data-theme="notepad++"] .markdown-body h6 { font-size: 0.9em; color: var(--text-muted); }
+
+[data-theme="notepad++"] .markdown-body p { margin-bottom: 12px; }
+[data-theme="notepad++"] .markdown-body a { color: var(--link-color); }
+[data-theme="notepad++"] .markdown-body a:hover { text-decoration: underline; }
+[data-theme="notepad++"] .markdown-body code {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 13px;
+    padding: 2px 4px;
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
+}
+[data-theme="notepad++"] .markdown-body pre {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 13px;
+    padding: 12px;
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+    margin-bottom: 12px;
+}
+[data-theme="notepad++"] .markdown-body pre code { padding: 0; border: none; }
+[data-theme="notepad++"] .markdown-body blockquote {
+    margin: 0 0 12px 0;
+    padding: 8px 16px;
+    border-left: 4px solid var(--blockquote-border);
+    background-color: var(--bg-secondary);
+}
+[data-theme="notepad++"] .markdown-body ul, 
+[data-theme="notepad++"] .markdown-body ol { padding-left: 24px; margin-bottom: 12px; }
+[data-theme="notepad++"] .markdown-body table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 12px;
+}
+[data-theme="notepad++"] .markdown-body table th,
+[data-theme="notepad++"] .markdown-body table td {
+    border: 1px solid var(--border-color);
+    padding: 6px 10px;
+}
+[data-theme="notepad++"] .markdown-body table th { background-color: var(--bg-secondary); }
+[data-theme="notepad++"] .markdown-body hr { border: none; border-top: 1px solid var(--border-color); margin: 20px 0; }
+[data-theme="notepad++"] .markdown-body img { max-width: 100%; }
+
+/* 代码高亮 - Notepad++ 亮色 (Default) */
+[data-theme="notepad++"][data-mode="light"] .hljs { color: #000000; }
+[data-theme="notepad++"][data-mode="light"] .hljs-comment { color: #007f00; }
+[data-theme="notepad++"][data-mode="light"] .hljs-keyword { color: #00007f; font-weight: bold; }
+[data-theme="notepad++"][data-mode="light"] .hljs-string { color: #7f007f; }
+[data-theme="notepad++"][data-mode="light"] .hljs-number { color: #ff0000; }
+[data-theme="notepad++"][data-mode="light"] .hljs-function { color: #7f7f00; }
+[data-theme="notepad++"][data-mode="light"] .hljs-title { color: #7f7f00; }
+[data-theme="notepad++"][data-mode="light"] .hljs-type { color: #007f7f; }
+[data-theme="notepad++"][data-mode="light"] .hljs-tag { color: #00007f; }
+[data-theme="notepad++"][data-mode="light"] .hljs-name { color: #00007f; }
+
+/* 代码高亮 - Notepad++ 暗色 (Zenburn 风格) */
+[data-theme="notepad++"][data-mode="dark"] .hljs { color: #d4d4d4; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-comment { color: #6a9955; font-style: italic; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-keyword { color: #569cd6; font-weight: bold; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-string { color: #ce9178; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-number { color: #b5cea8; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-function { color: #dcdcaa; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-title { color: #dcdcaa; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-type { color: #4ec9b0; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-tag { color: #569cd6; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-name { color: #569cd6; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-attr { color: #9cdcfe; }
+[data-theme="notepad++"][data-mode="dark"] .hljs-variable { color: #9cdcfe; }
+
+/* 括号着色 - Notepad++ 亮色 */
+[data-theme="notepad++"][data-mode="light"] .bracket-color-1 { color: #00007f; }
+[data-theme="notepad++"][data-mode="light"] .bracket-color-2 { color: #7f007f; }
+[data-theme="notepad++"][data-mode="light"] .bracket-color-3 { color: #ff0000; }
+[data-theme="notepad++"][data-mode="light"] .bracket-color-4 { color: #7f7f00; }
+[data-theme="notepad++"][data-mode="light"] .bracket-color-5 { color: #007f7f; }
+[data-theme="notepad++"][data-mode="light"] .bracket-color-6 { color: #3f7f3f; }
+
+/* 括号着色 - Notepad++ 暗色 */
+[data-theme="notepad++"][data-mode="dark"] .bracket-color-1 { color: #569cd6; }
+[data-theme="notepad++"][data-mode="dark"] .bracket-color-2 { color: #ce9178; }
+[data-theme="notepad++"][data-mode="dark"] .bracket-color-3 { color: #b5cea8; }
+[data-theme="notepad++"][data-mode="dark"] .bracket-color-4 { color: #dcdcaa; }
+[data-theme="notepad++"][data-mode="dark"] .bracket-color-5 { color: #4ec9b0; }
+[data-theme="notepad++"][data-mode="dark"] .bracket-color-6 { color: #9cdcfe; }

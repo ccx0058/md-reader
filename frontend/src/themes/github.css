@@ -1,0 +1,544 @@
+/* GitHub 风格主题 - 亮色 */
+[data-theme="github"][data-mode="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f6f8fa;
+    --bg-tertiary: #eaeef2;
+    --text-primary: #24292f;
+    --text-secondary: #57606a;
+    --text-muted: #8c959f;
+    --border-color: #d0d7de;
+    --accent-color: #0969da;
+    --code-bg: #f6f8fa;
+    --blockquote-border: #d0d7de;
+    --link-color: #0969da;
+}
+
+/* GitHub 风格主题 - 暗色 */
+[data-theme="github"][data-mode="dark"] {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #21262d;
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
+    --text-muted: #6e7681;
+    --border-color: #30363d;
+    --accent-color: #58a6ff;
+    --code-bg: #161b22;
+    --blockquote-border: #3b434b;
+    --link-color: #58a6ff;
+}
+
+/* Markdown 内容样式 */
+[data-theme="github"] .markdown-body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    color: var(--text-primary);
+}
+
+/* 标题样式 */
+[data-theme="github"] .markdown-body h1,
+[data-theme="github"] .markdown-body h2,
+[data-theme="github"] .markdown-body h3,
+[data-theme="github"] .markdown-body h4,
+[data-theme="github"] .markdown-body h5,
+[data-theme="github"] .markdown-body h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text-primary);
+}
+
+[data-theme="github"] .markdown-body h1 {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="github"] .markdown-body h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="github"] .markdown-body h3 {
+    font-size: 1.25em;
+}
+
+[data-theme="github"] .markdown-body h4 {
+    font-size: 1em;
+}
+
+[data-theme="github"] .markdown-body h5 {
+    font-size: 0.875em;
+}
+
+[data-theme="github"] .markdown-body h6 {
+    font-size: 0.85em;
+    color: var(--text-muted);
+}
+
+/* 段落 */
+[data-theme="github"] .markdown-body p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* 链接 */
+[data-theme="github"] .markdown-body a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+[data-theme="github"] .markdown-body a:hover {
+    text-decoration: underline;
+}
+
+/* 粗体和斜体 */
+[data-theme="github"] .markdown-body strong {
+    font-weight: 600;
+}
+
+[data-theme="github"] .markdown-body em {
+    font-style: italic;
+}
+
+/* 行内代码 */
+[data-theme="github"] .markdown-body code {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    background-color: rgba(175, 184, 193, 0.2);
+    border-radius: 6px;
+}
+
+[data-theme="github"][data-mode="dark"] .markdown-body code {
+    background-color: rgba(110, 118, 129, 0.4);
+}
+
+/* 代码块 */
+[data-theme="github"] .markdown-body pre {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 85%;
+    padding: 16px;
+    overflow: auto;
+    line-height: 1.45;
+    background-color: var(--code-bg);
+    border-radius: 6px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+[data-theme="github"] .markdown-body pre code {
+    display: block;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+    font-size: 100%;
+}
+
+/* 引用块 */
+[data-theme="github"] .markdown-body blockquote {
+    margin: 0 0 16px 0;
+    padding: 0 1em;
+    color: var(--text-secondary);
+    border-left: 0.25em solid var(--blockquote-border);
+}
+
+[data-theme="github"] .markdown-body blockquote> :first-child {
+    margin-top: 0;
+}
+
+[data-theme="github"] .markdown-body blockquote> :last-child {
+    margin-bottom: 0;
+}
+
+/* 列表 */
+[data-theme="github"] .markdown-body ul,
+[data-theme="github"] .markdown-body ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
+}
+
+[data-theme="github"] .markdown-body ul ul,
+[data-theme="github"] .markdown-body ul ol,
+[data-theme="github"] .markdown-body ol ol,
+[data-theme="github"] .markdown-body ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+[data-theme="github"] .markdown-body li {
+    margin-top: 0.25em;
+}
+
+[data-theme="github"] .markdown-body li+li {
+    margin-top: 0.25em;
+}
+
+/* 任务列表 */
+[data-theme="github"] .markdown-body .task-list-item {
+    list-style-type: none;
+}
+
+[data-theme="github"] .markdown-body .task-list-item input {
+    margin: 0 0.2em 0.25em -1.4em;
+    vertical-align: middle;
+}
+
+/* 表格 */
+[data-theme="github"] .markdown-body table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 16px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+[data-theme="github"] .markdown-body table th {
+    font-weight: 600;
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+[data-theme="github"] .markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="github"] .markdown-body table tr {
+    background-color: var(--bg-primary);
+    border-top: 1px solid var(--border-color);
+}
+
+[data-theme="github"] .markdown-body table tr:nth-child(2n) {
+    background-color: var(--bg-secondary);
+}
+
+/* 水平线 */
+[data-theme="github"] .markdown-body hr {
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: var(--border-color);
+    border: 0;
+}
+
+/* 图片 */
+[data-theme="github"] .markdown-body img {
+    max-width: 100%;
+    box-sizing: content-box;
+    background-color: var(--bg-primary);
+    border-radius: 6px;
+}
+
+/* 删除线 */
+[data-theme="github"] .markdown-body del {
+    text-decoration: line-through;
+}
+
+/* 键盘按键 */
+[data-theme="github"] .markdown-body kbd {
+    display: inline-block;
+    padding: 3px 5px;
+    font: 11px ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    line-height: 10px;
+    color: var(--text-primary);
+    vertical-align: middle;
+    background-color: var(--bg-secondary);
+    border: solid 1px var(--border-color);
+    border-bottom-color: var(--border-color);
+    border-radius: 6px;
+    box-shadow: inset 0 -1px 0 var(--border-color);
+}
+
+/* 脚注 */
+[data-theme="github"] .markdown-body .footnotes {
+    font-size: 12px;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    margin-top: 24px;
+    padding-top: 16px;
+}
+
+/* ============================================
+   代码高亮 - 亮色 (JetBrains IntelliJ Light 风格)
+   ============================================ */
+[data-theme="github"][data-mode="light"] .hljs {
+    color: #000000;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-comment,
+[data-theme="github"][data-mode="light"] .hljs-quote {
+    color: #8c8c8c;
+    font-style: italic;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-keyword,
+[data-theme="github"][data-mode="light"] .hljs-selector-tag {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-string,
+[data-theme="github"][data-mode="light"] .hljs-doctag {
+    color: #067d17;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-number {
+    color: #1750eb;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-literal,
+[data-theme="github"][data-mode="light"] .hljs-built_in {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-function {
+    color: #00627a;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-title,
+[data-theme="github"][data-mode="light"] .hljs-title.function_ {
+    color: #00627a;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-type,
+[data-theme="github"][data-mode="light"] .hljs-title.class_ {
+    color: #000000;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-variable,
+[data-theme="github"][data-mode="light"] .hljs-template-variable {
+    color: #871094;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-params {
+    color: #000000;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-property {
+    color: #871094;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-attr {
+    color: #174ad4;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-attribute {
+    color: #174ad4;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-operator {
+    color: #000000;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-punctuation {
+    color: #000000;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-symbol {
+    color: #067d17;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-meta {
+    color: #9e880d;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-regexp {
+    color: #264eff;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-tag {
+    color: #0033b3;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-name {
+    color: #0033b3;
+}
+
+[data-theme="github"][data-mode="light"] .hljs-selector-id,
+[data-theme="github"][data-mode="light"] .hljs-selector-class {
+    color: #871094;
+}
+
+/* ============================================
+   代码高亮 - 暗色 (JetBrains Darcula 风格)
+   ============================================ */
+[data-theme="github"][data-mode="dark"] .hljs {
+    color: #a9b7c6;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-comment,
+[data-theme="github"][data-mode="dark"] .hljs-quote {
+    color: #808080;
+    font-style: italic;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-keyword,
+[data-theme="github"][data-mode="dark"] .hljs-selector-tag {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-string,
+[data-theme="github"][data-mode="dark"] .hljs-doctag {
+    color: #6a8759;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-number {
+    color: #6897bb;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-literal,
+[data-theme="github"][data-mode="dark"] .hljs-built_in {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-function {
+    color: #ffc66d;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-title,
+[data-theme="github"][data-mode="dark"] .hljs-title.function_ {
+    color: #ffc66d;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-type,
+[data-theme="github"][data-mode="dark"] .hljs-title.class_ {
+    color: #a9b7c6;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-variable,
+[data-theme="github"][data-mode="dark"] .hljs-template-variable {
+    color: #9876aa;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-params {
+    color: #a9b7c6;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-property {
+    color: #9876aa;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-attr {
+    color: #bababa;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-attribute {
+    color: #bababa;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-operator {
+    color: #a9b7c6;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-punctuation {
+    color: #a9b7c6;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-symbol {
+    color: #6a8759;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-meta {
+    color: #bbb529;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-regexp {
+    color: #6897bb;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-tag {
+    color: #e8bf6a;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-name {
+    color: #e8bf6a;
+}
+
+[data-theme="github"][data-mode="dark"] .hljs-selector-id,
+[data-theme="github"][data-mode="dark"] .hljs-selector-class {
+    color: #9876aa;
+}
+
+/* 括号彩虹着色 - GitHub 亮色 */
+[data-theme="github"][data-mode="light"] .bracket-color-1 {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .bracket-color-2 {
+    color: #067d17;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .bracket-color-3 {
+    color: #871094;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .bracket-color-4 {
+    color: #00627a;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .bracket-color-5 {
+    color: #9e880d;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="light"] .bracket-color-6 {
+    color: #264eff;
+    font-weight: 600;
+}
+
+/* 括号彩虹着色 - GitHub 暗色 */
+[data-theme="github"][data-mode="dark"] .bracket-color-1 {
+    color: #ffc66d;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .bracket-color-2 {
+    color: #6a8759;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .bracket-color-3 {
+    color: #9876aa;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .bracket-color-4 {
+    color: #6897bb;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .bracket-color-5 {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="github"][data-mode="dark"] .bracket-color-6 {
+    color: #e8bf6a;
+    font-weight: 600;
+}

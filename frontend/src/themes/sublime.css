@@ -1,0 +1,355 @@
+/* Sublime Text Monokai 风格主题 - 优化版 */
+/* 亮色 */
+[data-theme="sublime"][data-mode="light"] {
+    --bg-primary: #fafafa;
+    --bg-secondary: #f0f0f0;
+    --bg-tertiary: #e8e8e8;
+    --text-primary: #2c2c2c;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #dddddd;
+    --accent-color: #ff3e68;
+    --code-bg: #ffffff;
+    --blockquote-border: #ff3e68;
+    --link-color: #00a8ff;
+}
+
+/* 暗色 - 经典 Monokai */
+[data-theme="sublime"][data-mode="dark"] {
+    --bg-primary: #272822;
+    --bg-secondary: #35352d;
+    --bg-tertiary: #3e3d38;
+    --text-primary: #f8f8f2;
+    --text-secondary: #75715e;
+    --text-muted: #8f908a;
+    --border-color: #49483e;
+    --accent-color: #f92672;
+    --code-bg: #1e1f1c;
+    --blockquote-border: #ae81ff;
+    --link-color: #66d9ef;
+}
+
+/* Markdown 内容样式 - 通用 */
+[data-theme="sublime"] .markdown-body {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text-primary);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 标题样式 - 暗色增强 */
+[data-theme="sublime"] .markdown-body h1,
+[data-theme="sublime"] .markdown-body h2,
+[data-theme="sublime"] .markdown-body h3,
+[data-theme="sublime"] .markdown-body h4,
+[data-theme="sublime"] .markdown-body h5,
+[data-theme="sublime"] .markdown-body h6 {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 28px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+[data-theme="sublime"] .markdown-body h1 { 
+    font-size: 2em; 
+    border-bottom: 2px solid var(--border-color); 
+    padding-bottom: 0.35em;
+    margin-top: 0;
+}
+[data-theme="sublime"] .markdown-body h2 { 
+    font-size: 1.6em; 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 0.25em;
+}
+[data-theme="sublime"] .markdown-body h3 { font-size: 1.35em; }
+[data-theme="sublime"] .markdown-body h4 { font-size: 1.15em; }
+[data-theme="sublime"] .markdown-body h5 { font-size: 1em; }
+[data-theme="sublime"] .markdown-body h6 { 
+    font-size: 0.9em; 
+    color: var(--text-muted); 
+}
+
+[data-theme="sublime"] .markdown-body p { 
+    margin-bottom: 18px; 
+    line-height: 1.8;
+}
+
+/* 链接 */
+[data-theme="sublime"] .markdown-body a { 
+    color: var(--link-color); 
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+[data-theme="sublime"] .markdown-body a:hover { 
+    border-bottom-color: var(--link-color);
+}
+
+/* 加粗和斜体 */
+[data-theme="sublime"] .markdown-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+[data-theme="sublime"] .markdown-body em {
+    font-style: italic;
+}
+
+/* 行内代码 - 更醒目 */
+[data-theme="sublime"] .markdown-body code {
+    font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 0.9em;
+    padding: 0.25em 0.5em;
+    background-color: var(--code-bg);
+    border-radius: 4px;
+    color: #fd971f;
+    border: 1px solid var(--border-color);
+}
+
+/* 代码块 - 暗色增强对比 */
+[data-theme="sublime"] .markdown-body pre {
+    font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 13px;
+    padding: 18px;
+    background-color: var(--code-bg);
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 18px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+[data-theme="sublime"] .markdown-body pre code { 
+    padding: 0; 
+    background: none; 
+    color: var(--text-primary);
+    border: none;
+}
+
+/* 引用块 - 优雅设计 */
+[data-theme="sublime"] .markdown-body blockquote {
+    margin: 0 0 18px 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--blockquote-border);
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: 0 6px 6px 0;
+}
+[data-theme="sublime"] .markdown-body blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* 列表 */
+[data-theme="sublime"] .markdown-body ul, 
+[data-theme="sublime"] .markdown-body ol { 
+    padding-left: 1.8em; 
+    margin-bottom: 18px; 
+}
+[data-theme="sublime"] .markdown-body li { 
+    margin-top: 6px;
+    line-height: 1.7;
+}
+[data-theme="sublime"] .markdown-body li > ul,
+[data-theme="sublime"] .markdown-body li > ol {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+/* 表格 - 优化样式 */
+[data-theme="sublime"] .markdown-body table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+[data-theme="sublime"] .markdown-body table th,
+[data-theme="sublime"] .markdown-body table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    text-align: left;
+}
+[data-theme="sublime"] .markdown-body table th { 
+    background-color: var(--bg-secondary);
+    font-weight: 600;
+}
+[data-theme="sublime"] .markdown-body table tr:hover td {
+    background-color: var(--bg-secondary);
+}
+
+/* 分割线 */
+[data-theme="sublime"] .markdown-body hr { 
+    border: none; 
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 28px 0; 
+}
+
+/* 图片 */
+[data-theme="sublime"] .markdown-body img { 
+    max-width: 100%; 
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 任务列表 */
+[data-theme="sublime"] .markdown-body .task-list-item {
+    list-style-type: none;
+    margin-left: -1.5em;
+}
+[data-theme="sublime"] .markdown-body .task-list-item input {
+    margin-right: 0.5em;
+}
+
+/* ============================================
+   代码高亮 - Monokai 亮色 (增强版)
+   ============================================ */
+[data-theme="sublime"][data-mode="light"] .hljs { color: #2c2c2c; }
+
+[data-theme="sublime"][data-mode="light"] .hljs-comment,
+[data-theme="sublime"][data-mode="light"] .hljs-quote {
+    color: #75715e;
+    font-style: italic;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-keyword,
+[data-theme="sublime"][data-mode="light"] .hljs-selector-tag {
+    color: #f92672;
+    font-weight: 600;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-string,
+[data-theme="sublime"][data-mode="light"] .hljs-addition {
+    color: #a6e22e;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-number,
+[data-theme="sublime"][data-mode="light"] .hljs-literal {
+    color: #ae81ff;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-function,
+[data-theme="sublime"][data-mode="light"] .hljs-title {
+    color: #00a8ff;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-type,
+[data-theme="sublime"][data-mode="light"] .hljs-class {
+    color: #66d9ef;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-tag,
+[data-theme="sublime"][data-mode="light"] .hljs-name {
+    color: #f92672;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-attr,
+[data-theme="sublime"][data-mode="light"] .hljs-attribute {
+    color: #00a8ff;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-variable,
+[data-theme="sublime"][data-mode="light"] .hljs-template-variable {
+    color: #fd971f;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-built_in,
+[data-theme="sublime"][data-mode="light"] .hljs-builtin-name {
+    color: #66d9ef;
+}
+
+[data-theme="sublime"][data-mode="light"] .hljs-meta {
+    color: #999999;
+}
+
+/* ============================================
+   代码高亮 - Monokai 暗色 (经典)
+   ============================================ */
+[data-theme="sublime"][data-mode="dark"] .hljs { color: #f8f8f2; }
+
+[data-theme="sublime"][data-mode="dark"] .hljs-comment,
+[data-theme="sublime"][data-mode="dark"] .hljs-quote {
+    color: #75715e;
+    font-style: italic;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-keyword,
+[data-theme="sublime"][data-mode="dark"] .hljs-selector-tag {
+    color: #f92672;
+    font-weight: 600;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-string,
+[data-theme="sublime"][data-mode="dark"] .hljs-addition {
+    color: #e6db74;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-number,
+[data-theme="sublime"][data-mode="dark"] .hljs-literal {
+    color: #ae81ff;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-function,
+[data-theme="sublime"][data-mode="dark"] .hljs-title {
+    color: #a6e22e;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-type,
+[data-theme="sublime"][data-mode="dark"] .hljs-class {
+    color: #66d9ef;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-tag,
+[data-theme="sublime"][data-mode="dark"] .hljs-name {
+    color: #f92672;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-attr,
+[data-theme="sublime"][data-mode="dark"] .hljs-attribute {
+    color: #a6e22e;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-variable,
+[data-theme="sublime"][data-mode="dark"] .hljs-template-variable {
+    color: #fd971f;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-built_in,
+[data-theme="sublime"][data-mode="dark"] .hljs-builtin-name {
+    color: #66d9ef;
+}
+
+[data-theme="sublime"][data-mode="dark"] .hljs-meta {
+    color: #8f908a;
+}
+
+/* 删除线 */
+[data-theme="sublime"][data-mode="dark"] .hljs-deletion {
+    color: #f92672;
+}
+
+/* ============================================
+   括号彩虹着色 - Monokai 亮色
+   ============================================ */
+[data-theme="sublime"][data-mode="light"] .bracket-color-1 { color: #f92672; }
+[data-theme="sublime"][data-mode="light"] .bracket-color-2 { color: #a6e22e; }
+[data-theme="sublime"][data-mode="light"] .bracket-color-3 { color: #ae81ff; }
+[data-theme="sublime"][data-mode="light"] .bracket-color-4 { color: #00a8ff; }
+[data-theme="sublime"][data-mode="light"] .bracket-color-5 { color: #66d9ef; }
+[data-theme="sublime"][data-mode="light"] .bracket-color-6 { color: #fd971f; }
+
+/* 括号彩虹着色 - Monokai 暗色 */
+[data-theme="sublime"][data-mode="dark"] .bracket-color-1 { color: #f92672; }
+[data-theme="sublime"][data-mode="dark"] .bracket-color-2 { color: #e6db74; }
+[data-theme="sublime"][data-mode="dark"] .bracket-color-3 { color: #ae81ff; }
+[data-theme="sublime"][data-mode="dark"] .bracket-color-4 { color: #a6e22e; }
+[data-theme="sublime"][data-mode="dark"] .bracket-color-5 { color: #66d9ef; }
+[data-theme="sublime"][data-mode="dark"] .bracket-color-6 { color: #fd971f; }
+
+/* Katex 公式样式 */
+[data-theme="sublime"] .katex { font-size: 1.1em; }
+[data-theme="sublime"][data-mode="light"] .katex { color: #2c2c2c; }
+[data-theme="sublime"][data-mode="dark"] .katex { color: #f8f8f2; }

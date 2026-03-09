@@ -1,0 +1,477 @@
+/* Typora 风格主题 - 亮色 */
+[data-theme="typora"][data-mode="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --bg-tertiary: #f0f0f0;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #e7e7e7;
+    --accent-color: #4183c4;
+    --code-bg: #f8f8f8;
+    --blockquote-border: #dfe2e5;
+    --link-color: #4183c4;
+}
+
+/* Typora 风格主题 - 暗色 */
+[data-theme="typora"][data-mode="dark"] {
+    --bg-primary: #1e1e1e;
+    --bg-secondary: #252525;
+    --bg-tertiary: #2d2d2d;
+    --text-primary: #c8c8c8;
+    --text-secondary: #999999;
+    --text-muted: #666666;
+    --border-color: #3d3d3d;
+    --accent-color: #6db3f2;
+    --code-bg: #2d2d2d;
+    --blockquote-border: #4d4d4d;
+    --link-color: #6db3f2;
+}
+
+/* Markdown 内容样式 */
+[data-theme="typora"] .markdown-body {
+    font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    color: var(--text-primary);
+}
+
+/* 标题样式 */
+[data-theme="typora"] .markdown-body h1,
+[data-theme="typora"] .markdown-body h2,
+[data-theme="typora"] .markdown-body h3,
+[data-theme="typora"] .markdown-body h4,
+[data-theme="typora"] .markdown-body h5,
+[data-theme="typora"] .markdown-body h6 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    color: var(--text-primary);
+}
+
+[data-theme="typora"] .markdown-body h1 {
+    font-size: 2.25rem;
+    text-align: center;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="typora"] .markdown-body h2 {
+    font-size: 1.75rem;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="typora"] .markdown-body h3 {
+    font-size: 1.5rem;
+}
+
+[data-theme="typora"] .markdown-body h4 {
+    font-size: 1.25rem;
+}
+
+[data-theme="typora"] .markdown-body h5 {
+    font-size: 1rem;
+}
+
+[data-theme="typora"] .markdown-body h6 {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+/* 段落 */
+[data-theme="typora"] .markdown-body p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* 链接 */
+[data-theme="typora"] .markdown-body a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+[data-theme="typora"] .markdown-body a:hover {
+    text-decoration: underline;
+}
+
+/* 粗体和斜体 */
+[data-theme="typora"] .markdown-body strong {
+    font-weight: bold;
+}
+
+[data-theme="typora"] .markdown-body em {
+    font-style: italic;
+}
+
+/* 行内代码 */
+[data-theme="typora"] .markdown-body code {
+    font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
+    font-size: 0.9em;
+    padding: 2px 4px;
+    margin: 0 2px;
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+}
+
+/* 代码块 */
+[data-theme="typora"] .markdown-body pre {
+    font-family: "Fira Code", Consolas, "Liberation Mono", Courier, monospace;
+    font-size: 0.9em;
+    padding: 1rem;
+    overflow: auto;
+    line-height: 1.45;
+    background-color: var(--code-bg);
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+[data-theme="typora"] .markdown-body pre code {
+    display: block;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+    font-size: 100%;
+}
+
+/* 引用块 */
+[data-theme="typora"] .markdown-body blockquote {
+    margin: 0 0 1rem 0;
+    padding: 0 1rem;
+    color: var(--text-secondary);
+    border-left: 4px solid var(--blockquote-border);
+}
+
+/* 列表 */
+[data-theme="typora"] .markdown-body ul,
+[data-theme="typora"] .markdown-body ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+}
+
+[data-theme="typora"] .markdown-body li {
+    margin-top: 0.25rem;
+}
+
+/* 表格 */
+[data-theme="typora"] .markdown-body table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+[data-theme="typora"] .markdown-body table th {
+    font-weight: bold;
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+[data-theme="typora"] .markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="typora"] .markdown-body table tr:nth-child(2n) {
+    background-color: var(--bg-secondary);
+}
+
+/* 水平线 */
+[data-theme="typora"] .markdown-body hr {
+    height: 2px;
+    padding: 0;
+    margin: 24px 0;
+    background-color: var(--border-color);
+    border: 0;
+}
+
+/* 图片 */
+[data-theme="typora"] .markdown-body img {
+    max-width: 100%;
+    box-sizing: content-box;
+}
+
+/* ============================================
+   代码高亮 - 亮色 (JetBrains IntelliJ Light 风格)
+   ============================================ */
+[data-theme="typora"][data-mode="light"] .hljs {
+    color: #000000;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-comment,
+[data-theme="typora"][data-mode="light"] .hljs-quote {
+    color: #8c8c8c;
+    font-style: italic;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-keyword,
+[data-theme="typora"][data-mode="light"] .hljs-selector-tag {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-string,
+[data-theme="typora"][data-mode="light"] .hljs-doctag {
+    color: #067d17;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-number {
+    color: #1750eb;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-literal,
+[data-theme="typora"][data-mode="light"] .hljs-built_in {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-function {
+    color: #00627a;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-title,
+[data-theme="typora"][data-mode="light"] .hljs-title.function_ {
+    color: #00627a;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-type,
+[data-theme="typora"][data-mode="light"] .hljs-title.class_ {
+    color: #000000;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-variable,
+[data-theme="typora"][data-mode="light"] .hljs-template-variable {
+    color: #871094;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-params {
+    color: #000000;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-property {
+    color: #871094;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-attr {
+    color: #174ad4;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-attribute {
+    color: #174ad4;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-operator {
+    color: #000000;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-punctuation {
+    color: #000000;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-symbol {
+    color: #067d17;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-meta {
+    color: #9e880d;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-regexp {
+    color: #264eff;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-tag {
+    color: #0033b3;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-name {
+    color: #0033b3;
+}
+
+[data-theme="typora"][data-mode="light"] .hljs-selector-id,
+[data-theme="typora"][data-mode="light"] .hljs-selector-class {
+    color: #871094;
+}
+
+/* ============================================
+   代码高亮 - 暗色 (JetBrains Darcula 风格)
+   ============================================ */
+[data-theme="typora"][data-mode="dark"] .hljs {
+    color: #a9b7c6;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-comment,
+[data-theme="typora"][data-mode="dark"] .hljs-quote {
+    color: #808080;
+    font-style: italic;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-keyword,
+[data-theme="typora"][data-mode="dark"] .hljs-selector-tag {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-string,
+[data-theme="typora"][data-mode="dark"] .hljs-doctag {
+    color: #6a8759;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-number {
+    color: #6897bb;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-literal,
+[data-theme="typora"][data-mode="dark"] .hljs-built_in {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-function {
+    color: #ffc66d;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-title,
+[data-theme="typora"][data-mode="dark"] .hljs-title.function_ {
+    color: #ffc66d;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-type,
+[data-theme="typora"][data-mode="dark"] .hljs-title.class_ {
+    color: #a9b7c6;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-variable,
+[data-theme="typora"][data-mode="dark"] .hljs-template-variable {
+    color: #9876aa;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-params {
+    color: #a9b7c6;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-property {
+    color: #9876aa;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-attr {
+    color: #bababa;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-attribute {
+    color: #bababa;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-operator {
+    color: #a9b7c6;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-punctuation {
+    color: #a9b7c6;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-symbol {
+    color: #6a8759;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-meta {
+    color: #bbb529;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-regexp {
+    color: #6897bb;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-tag {
+    color: #e8bf6a;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-name {
+    color: #e8bf6a;
+}
+
+[data-theme="typora"][data-mode="dark"] .hljs-selector-id,
+[data-theme="typora"][data-mode="dark"] .hljs-selector-class {
+    color: #9876aa;
+}
+
+/* 括号彩虹着色 - Typora 亮色 */
+[data-theme="typora"][data-mode="light"] .bracket-color-1 {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .bracket-color-2 {
+    color: #067d17;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .bracket-color-3 {
+    color: #871094;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .bracket-color-4 {
+    color: #00627a;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .bracket-color-5 {
+    color: #9e880d;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="light"] .bracket-color-6 {
+    color: #264eff;
+    font-weight: 600;
+}
+
+/* 括号彩虹着色 - Typora 暗色 */
+[data-theme="typora"][data-mode="dark"] .bracket-color-1 {
+    color: #ffc66d;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .bracket-color-2 {
+    color: #6a8759;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .bracket-color-3 {
+    color: #9876aa;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .bracket-color-4 {
+    color: #6897bb;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .bracket-color-5 {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="typora"][data-mode="dark"] .bracket-color-6 {
+    color: #e8bf6a;
+    font-weight: 600;
+}

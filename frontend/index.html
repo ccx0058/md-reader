@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="github" data-mode="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Reader</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <!-- 原有主题 -->
+    <link rel="stylesheet" href="/src/themes/github.css">
+    <link rel="stylesheet" href="/src/themes/typora.css">
+    <link rel="stylesheet" href="/src/themes/marktext.css">
+    <link rel="stylesheet" href="/src/themes/obsidian.css">
+    <!-- 编辑器主题 -->
+    <link rel="stylesheet" href="/src/themes/vscode.css">
+    <link rel="stylesheet" href="/src/themes/notepad++.css">
+    <link rel="stylesheet" href="/src/themes/sublime.css">
+    <link rel="stylesheet" href="/src/themes/jetbrains.css">
+    <!-- 社区主题 -->
+    <link rel="stylesheet" href="/src/themes/dracula.css">
+    <link rel="stylesheet" href="/src/themes/nord.css">
+    <link rel="stylesheet" href="/src/themes/onedark.css">
+    <link rel="stylesheet" href="/src/themes/solarized.css">
+    <!-- 高颜值主题 -->
+    <link rel="stylesheet" href="/src/themes/material.css">
+    <link rel="stylesheet" href="/src/themes/gruvbox.css">
+    <link rel="stylesheet" href="/src/themes/ayu.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- 侧边栏 - 文件树 -->
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <span class="sidebar-title">文件</span>
+                <button id="btn-toggle-sidebar" class="btn-icon" title="收起侧边栏">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M11 2L5 8l6 6V2z" />
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- 最近文件 -->
+            <div id="recent-files" class="recent-files">
+                <div class="recent-files-header">
+                    <span>最近文件</span>
+                    <button id="btn-clear-recent" class="btn-icon-small" title="清除记录">✕</button>
+                </div>
+                <ul id="recent-files-list" class="recent-files-list"></ul>
+            </div>
+            
+            <!-- 书签 -->
+            <div id="bookmarks" class="bookmarks">
+                <div class="bookmarks-header">
+                    <span>书签</span>
+                </div>
+                <ul id="bookmarks-list" class="bookmarks-list"></ul>
+            </div>
+            
+            <div id="file-tree" class="file-tree">
+                <div class="empty-state">
+                    <p>打开文件夹以浏览文件</p>
+                    <button id="btn-open-folder" class="btn-primary">打开文件夹</button>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 侧边栏展开按钮 -->
+        <button id="btn-expand-sidebar" class="sidebar-toggle-btn" title="展开侧边栏">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M5 2l6 6-6 6V2z" />
+            </svg>
+        </button>
+
+        <!-- 主内容区 -->
+        <main id="main-content" class="main-content">
+            <!-- 工具栏 -->
+            <div id="toolbar" class="toolbar">
+                <!-- 书签按钮 -->
+                <button id="btn-toggle-bookmark" class="btn-icon" title="收藏此文件">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M3 2v13l5-3 5 3V2a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1z"/>
+                    </svg>
+                </button>
+                
+                <!-- 搜索框 -->
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索... (Ctrl+F)" autocomplete="off">
+                    <span class="search-count" id="search-count"></span>
+                    <button id="btn-search-options" class="btn-icon-small" title="搜索选项">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 4.5a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3a.5.5 0 0 1 .5-.5z"/>
+                            <circle cx="8" cy="8" r="7" stroke="currentColor" fill="none"/>
+                        </svg>
+                    </button>
+                    <button id="btn-search-prev" class="btn-icon-small" title="上一个">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 3l-5 5h10z"/></svg>
+                    </button>
+                    <button id="btn-search-next" class="btn-icon-small" title="下一个">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M8 13l5-5H3z"/></svg>
+                    </button>
+                    <button id="btn-search-close" class="btn-icon-small" title="关闭">
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="2"/></svg>
+                    </button>
+                    
+                    <!-- 搜索选项面板 -->
+                    <div id="search-options-panel" class="search-options-panel">
+                        <label>
+                            <input type="checkbox" id="search-case-sensitive"> 区分大小写
+                        </label>
+                        <label>
+                            <input type="checkbox" id="search-whole-word"> 全词匹配
+                        </label>
+                        <label>
+                            <input type="checkbox" id="search-regex"> 正则表达式
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文档内容 -->
+            <article id="document-content" class="document-content">
+                <div class="welcome-screen">
+                    <h1>MD Reader</h1>
+                    <p>轻量级 Markdown 阅读器</p>
+                    <div class="welcome-actions">
+                        <button id="btn-open-file" class="btn-primary">打开文件</button>
+                        <button id="btn-open-folder-main" class="btn-secondary">打开文件夹</button>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <!-- 大纲展开按钮 -->
+        <button id="btn-expand-outline" class="outline-toggle-btn" title="展开大纲">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path d="M11 2L5 8l6 6V2z" />
+            </svg>
+        </button>
+
+        <!-- 大纲面板 -->
+        <aside id="outline-panel" class="outline-panel">
+            <div class="outline-header">
+                <span class="outline-title">大纲</span>
+                <button id="btn-toggle-outline" class="btn-icon" title="收起大纲">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path d="M5 2l6 6-6 6V2z" />
+                    </svg>
+                </button>
+            </div>
+            <nav id="outline-content" class="outline-content">
+                <div class="empty-state">
+                    <p>打开文档后显示大纲</p>
+                </div>
+            </nav>
+            <!-- 状态栏移到大纲面板底部 -->
+            <div id="status-bar" class="status-bar">
+                <span id="word-count">字数: 0</span>
+                <span id="char-count">字符: 0</span>
+                <span id="line-count">行数: 0</span>
+            </div>
+        </aside>
+
+        <!-- 图片预览弹窗 -->
+        <div id="image-modal" class="image-modal">
+            <span class="image-modal-close">&times;</span>
+            <img class="image-modal-content" id="image-modal-img">
+        </div>
+    </div>
+
+    <script src="/src/main.js" type="module"></script>
+</body>
+
+</html>

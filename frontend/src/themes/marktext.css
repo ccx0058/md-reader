@@ -1,0 +1,475 @@
+/* MarkText 风格主题 - 亮色 */
+[data-theme="marktext"][data-mode="light"] {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f5f5f5;
+    --bg-tertiary: #ebebeb;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #dcdcdc;
+    --accent-color: #409eff;
+    --code-bg: #f5f5f5;
+    --blockquote-border: #409eff;
+    --link-color: #409eff;
+}
+
+/* MarkText 风格主题 - 暗色 */
+[data-theme="marktext"][data-mode="dark"] {
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #242424;
+    --bg-tertiary: #2e2e2e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --text-muted: #707070;
+    --border-color: #404040;
+    --accent-color: #409eff;
+    --code-bg: #2e2e2e;
+    --blockquote-border: #409eff;
+    --link-color: #409eff;
+}
+
+/* Markdown 内容样式 */
+[data-theme="marktext"] .markdown-body {
+    font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    color: var(--text-primary);
+}
+
+/* 标题样式 */
+[data-theme="marktext"] .markdown-body h1,
+[data-theme="marktext"] .markdown-body h2,
+[data-theme="marktext"] .markdown-body h3,
+[data-theme="marktext"] .markdown-body h4,
+[data-theme="marktext"] .markdown-body h5,
+[data-theme="marktext"] .markdown-body h6 {
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    color: var(--text-primary);
+}
+
+[data-theme="marktext"] .markdown-body h1 {
+    font-size: 2em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="marktext"] .markdown-body h2 {
+    font-size: 1.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="marktext"] .markdown-body h3 {
+    font-size: 1.25em;
+}
+
+[data-theme="marktext"] .markdown-body h4 {
+    font-size: 1em;
+}
+
+[data-theme="marktext"] .markdown-body h5 {
+    font-size: 0.875em;
+}
+
+[data-theme="marktext"] .markdown-body h6 {
+    font-size: 0.85em;
+    color: var(--text-muted);
+}
+
+/* 段落 */
+[data-theme="marktext"] .markdown-body p {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+/* 链接 */
+[data-theme="marktext"] .markdown-body a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+[data-theme="marktext"] .markdown-body a:hover {
+    text-decoration: underline;
+}
+
+/* 粗体和斜体 */
+[data-theme="marktext"] .markdown-body strong {
+    font-weight: 600;
+}
+
+[data-theme="marktext"] .markdown-body em {
+    font-style: italic;
+}
+
+/* 行内代码 */
+[data-theme="marktext"] .markdown-body code {
+    font-family: "Fira Code", "Source Code Pro", Consolas, monospace;
+    font-size: 85%;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    background-color: var(--code-bg);
+    border-radius: 4px;
+}
+
+/* 代码块 */
+[data-theme="marktext"] .markdown-body pre {
+    font-family: "Fira Code", "Source Code Pro", Consolas, monospace;
+    font-size: 85%;
+    padding: 16px;
+    overflow: auto;
+    line-height: 1.45;
+    background-color: var(--code-bg);
+    border-radius: 4px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+[data-theme="marktext"] .markdown-body pre code {
+    display: block;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+    font-size: 100%;
+}
+
+/* 引用块 */
+[data-theme="marktext"] .markdown-body blockquote {
+    margin: 0 0 16px 0;
+    padding: 0 1em;
+    color: var(--text-secondary);
+    border-left: 4px solid var(--blockquote-border);
+}
+
+/* 列表 */
+[data-theme="marktext"] .markdown-body ul,
+[data-theme="marktext"] .markdown-body ol {
+    margin-top: 0;
+    margin-bottom: 16px;
+    padding-left: 2em;
+}
+
+[data-theme="marktext"] .markdown-body li {
+    margin-top: 0.25em;
+}
+
+/* 表格 */
+[data-theme="marktext"] .markdown-body table {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow: auto;
+    margin-top: 0;
+    margin-bottom: 16px;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+[data-theme="marktext"] .markdown-body table th {
+    font-weight: 600;
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-secondary);
+}
+
+[data-theme="marktext"] .markdown-body table td {
+    padding: 6px 13px;
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="marktext"] .markdown-body table tr:nth-child(2n) {
+    background-color: var(--bg-secondary);
+}
+
+/* 水平线 */
+[data-theme="marktext"] .markdown-body hr {
+    height: 2px;
+    padding: 0;
+    margin: 24px 0;
+    background-color: var(--border-color);
+    border: 0;
+}
+
+/* 图片 */
+[data-theme="marktext"] .markdown-body img {
+    max-width: 100%;
+    box-sizing: content-box;
+    border-radius: 4px;
+}
+
+/* ============================================
+   代码高亮 - 亮色 (JetBrains IntelliJ Light 风格)
+   ============================================ */
+[data-theme="marktext"][data-mode="light"] .hljs {
+    color: #000000;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-comment,
+[data-theme="marktext"][data-mode="light"] .hljs-quote {
+    color: #8c8c8c;
+    font-style: italic;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-keyword,
+[data-theme="marktext"][data-mode="light"] .hljs-selector-tag {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-string,
+[data-theme="marktext"][data-mode="light"] .hljs-doctag {
+    color: #067d17;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-number {
+    color: #1750eb;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-literal,
+[data-theme="marktext"][data-mode="light"] .hljs-built_in {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-function {
+    color: #00627a;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-title,
+[data-theme="marktext"][data-mode="light"] .hljs-title.function_ {
+    color: #00627a;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-type,
+[data-theme="marktext"][data-mode="light"] .hljs-title.class_ {
+    color: #000000;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-variable,
+[data-theme="marktext"][data-mode="light"] .hljs-template-variable {
+    color: #871094;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-params {
+    color: #000000;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-property {
+    color: #871094;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-attr {
+    color: #174ad4;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-attribute {
+    color: #174ad4;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-operator {
+    color: #000000;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-punctuation {
+    color: #000000;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-symbol {
+    color: #067d17;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-meta {
+    color: #9e880d;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-regexp {
+    color: #264eff;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-tag {
+    color: #0033b3;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-name {
+    color: #0033b3;
+}
+
+[data-theme="marktext"][data-mode="light"] .hljs-selector-id,
+[data-theme="marktext"][data-mode="light"] .hljs-selector-class {
+    color: #871094;
+}
+
+/* ============================================
+   代码高亮 - 暗色 (JetBrains Darcula 风格)
+   ============================================ */
+[data-theme="marktext"][data-mode="dark"] .hljs {
+    color: #a9b7c6;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-comment,
+[data-theme="marktext"][data-mode="dark"] .hljs-quote {
+    color: #808080;
+    font-style: italic;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-keyword,
+[data-theme="marktext"][data-mode="dark"] .hljs-selector-tag {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-string,
+[data-theme="marktext"][data-mode="dark"] .hljs-doctag {
+    color: #6a8759;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-number {
+    color: #6897bb;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-literal,
+[data-theme="marktext"][data-mode="dark"] .hljs-built_in {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-function {
+    color: #ffc66d;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-title,
+[data-theme="marktext"][data-mode="dark"] .hljs-title.function_ {
+    color: #ffc66d;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-type,
+[data-theme="marktext"][data-mode="dark"] .hljs-title.class_ {
+    color: #a9b7c6;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-variable,
+[data-theme="marktext"][data-mode="dark"] .hljs-template-variable {
+    color: #9876aa;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-params {
+    color: #a9b7c6;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-property {
+    color: #9876aa;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-attr {
+    color: #bababa;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-attribute {
+    color: #bababa;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-operator {
+    color: #a9b7c6;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-punctuation {
+    color: #a9b7c6;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-symbol {
+    color: #6a8759;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-meta {
+    color: #bbb529;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-regexp {
+    color: #6897bb;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-tag {
+    color: #e8bf6a;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-name {
+    color: #e8bf6a;
+}
+
+[data-theme="marktext"][data-mode="dark"] .hljs-selector-id,
+[data-theme="marktext"][data-mode="dark"] .hljs-selector-class {
+    color: #9876aa;
+}
+
+/* 括号彩虹着色 - MarkText 亮色 */
+[data-theme="marktext"][data-mode="light"] .bracket-color-1 {
+    color: #0033b3;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .bracket-color-2 {
+    color: #067d17;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .bracket-color-3 {
+    color: #871094;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .bracket-color-4 {
+    color: #00627a;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .bracket-color-5 {
+    color: #9e880d;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="light"] .bracket-color-6 {
+    color: #264eff;
+    font-weight: 600;
+}
+
+/* 括号彩虹着色 - MarkText 暗色 */
+[data-theme="marktext"][data-mode="dark"] .bracket-color-1 {
+    color: #ffc66d;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .bracket-color-2 {
+    color: #6a8759;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .bracket-color-3 {
+    color: #9876aa;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .bracket-color-4 {
+    color: #6897bb;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .bracket-color-5 {
+    color: #cc7832;
+    font-weight: 600;
+}
+
+[data-theme="marktext"][data-mode="dark"] .bracket-color-6 {
+    color: #e8bf6a;
+    font-weight: 600;
+}

@@ -1,0 +1,267 @@
+/* Ayu 风格主题 - 现代化简洁风格 */
+/* 亮色 */
+[data-theme="ayu"][data-mode="light"] {
+    --bg-primary: #fafafa;
+    --bg-secondary: #f0f0f0;
+    --bg-tertiary: #e8e8e8;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --border-color: #e0e0e0;
+    --accent-color: #ff6b6b;
+    --code-bg: #fcfcfc;
+    --blockquote-border: #ff6b6b;
+    --link-color: #40a7ff;
+}
+
+/* 暗色 - Ayu Dark */
+[data-theme="ayu"][data-mode="dark"] {
+    --bg-primary: #0a0e14;
+    --bg-secondary: #141b22;
+    --bg-tertiary: #1c232e;
+    --text-primary: #b3b1ad;
+    --text-secondary: #738495;
+    --text-muted: #5c6773;
+    --border-color: #2a3341;
+    --accent-color: #ff8f40;
+    --code-bg: #0d1117;
+    --blockquote-border: #ff8f40;
+    --link-color: #39bae6;
+}
+
+/* Markdown 内容样式 */
+[data-theme="ayu"] .markdown-body {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text-primary);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 标题样式 */
+[data-theme="ayu"] .markdown-body h1,
+[data-theme="ayu"] .markdown-body h2,
+[data-theme="ayu"] .markdown-body h3,
+[data-theme="ayu"] .markdown-body h4,
+[data-theme="ayu"] .markdown-body h5,
+[data-theme="ayu"] .markdown-body h6 {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 28px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+[data-theme="ayu"] .markdown-body h1 { 
+    font-size: 2em; 
+    border-bottom: 2px solid var(--border-color); 
+    padding-bottom: 0.35em;
+    margin-top: 0;
+}
+[data-theme="ayu"] .markdown-body h2 { 
+    font-size: 1.6em; 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 0.25em;
+}
+[data-theme="ayu"] .markdown-body h3 { font-size: 1.35em; }
+[data-theme="ayu"] .markdown-body h4 { font-size: 1.15em; }
+[data-theme="ayu"] .markdown-body h5 { font-size: 1em; }
+[data-theme="ayu"] .markdown-body h6 { 
+    font-size: 0.9em; 
+    color: var(--text-muted); 
+}
+
+[data-theme="ayu"] .markdown-body p { 
+    margin-bottom: 18px; 
+    line-height: 1.8;
+}
+
+/* 链接 */
+[data-theme="ayu"] .markdown-body a { 
+    color: var(--link-color); 
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+[data-theme="ayu"] .markdown-body a:hover { 
+    border-bottom-color: var(--link-color);
+}
+
+/* 加粗和斜体 */
+[data-theme="ayu"] .markdown-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+[data-theme="ayu"] .markdown-body em {
+    font-style: italic;
+}
+
+/* 行内代码 */
+[data-theme="ayu"] .markdown-body code {
+    font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 0.9em;
+    padding: 0.25em 0.5em;
+    background-color: var(--code-bg);
+    border-radius: 4px;
+    color: #ff6b6b;
+    border: 1px solid var(--border-color);
+}
+
+/* 代码块 */
+[data-theme="ayu"] .markdown-body pre {
+    font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 13px;
+    padding: 18px;
+    background-color: var(--code-bg);
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 18px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+[data-theme="ayu"] .markdown-body pre code { 
+    padding: 0; 
+    background: none; 
+    color: var(--text-primary);
+    border: none;
+}
+
+/* 引用块 */
+[data-theme="ayu"] .markdown-body blockquote {
+    margin: 0 0 18px 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--blockquote-border);
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: 0 6px 6px 0;
+}
+[data-theme="ayu"] .markdown-body blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* 列表 */
+[data-theme="ayu"] .markdown-body ul, 
+[data-theme="ayu"] .markdown-body ol { 
+    padding-left: 1.8em; 
+    margin-bottom: 18px; 
+}
+[data-theme="ayu"] .markdown-body li { 
+    margin-top: 6px;
+    line-height: 1.7;
+}
+[data-theme="ayu"] .markdown-body li > ul,
+[data-theme="ayu"] .markdown-body li > ol {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+/* 表格 */
+[data-theme="ayu"] .markdown-body table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+[data-theme="ayu"] .markdown-body table th,
+[data-theme="ayu"] .markdown-body table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    text-align: left;
+}
+[data-theme="ayu"] .markdown-body table th { 
+    background-color: var(--bg-secondary);
+    font-weight: 600;
+}
+[data-theme="ayu"] .markdown-body table tr:hover td {
+    background-color: var(--bg-secondary);
+}
+
+/* 分割线 */
+[data-theme="ayu"] .markdown-body hr { 
+    border: none; 
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 28px 0; 
+}
+
+/* 图片 */
+[data-theme="ayu"] .markdown-body img { 
+    max-width: 100%; 
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 任务列表 */
+[data-theme="ayu"] .markdown-body .task-list-item {
+    list-style-type: none;
+    margin-left: -1.5em;
+}
+[data-theme="ayu"] .markdown-body .task-list-item input {
+    margin-right: 0.5em;
+}
+
+/* ============================================
+   代码高亮 - Ayu 亮色
+   ============================================ */
+[data-theme="ayu"][data-mode="light"] .hljs { color: #333333; }
+[data-theme="ayu"][data-mode="light"] .hljs-comment { color: #999999; font-style: italic; }
+[data-theme="ayu"][data-mode="light"] .hljs-keyword { color: #ff6b6b; font-weight: 600; }
+[data-theme="ayu"][data-mode="light"] .hljs-string { color: #86b300; }
+[data-theme="ayu"][data-mode="light"] .hljs-number { color: #f4005f; }
+[data-theme="ayu"][data-mode="light"] .hljs-function { color: #40a7ff; }
+[data-theme="ayu"][data-mode="light"] .hljs-title { color: #40a7ff; }
+[data-theme="ayu"][data-mode="light"] .hljs-type { color: #ff6b6b; }
+[data-theme="ayu"][data-mode="light"] .hljs-tag { color: #ff6b6b; }
+[data-theme="ayu"][data-mode="light"] .hljs-name { color: #ff6b6b; }
+[data-theme="ayu"][data-mode="light"] .hljs-attr { color: #40a7ff; }
+[data-theme="ayu"][data-mode="light"] .hljs-variable { color: #f4005f; }
+[data-theme="ayu"][data-mode="light"] .hljs-built_in { color: #40a7ff; }
+[data-theme="ayu"][data-mode="light"] .hljs-title.function_ { color: #40a7ff; }
+
+/* ============================================
+   代码高亮 - Ayu 暗色
+   ============================================ */
+[data-theme="ayu"][data-mode="dark"] .hljs { color: #b3b1ad; }
+[data-theme="ayu"][data-mode="dark"] .hljs-comment { color: #5c6773; font-style: italic; }
+[data-theme="ayu"][data-mode="dark"] .hljs-keyword { color: #ff8f40; font-weight: 600; }
+[data-theme="ayu"][data-mode="dark"] .hljs-string { color: #aad94c; }
+[data-theme="ayu"][data-mode="dark"] .hljs-number { color: #f4005f; }
+[data-theme="ayu"][data-mode="dark"] .hljs-function { color: #39bae6; }
+[data-theme="ayu"][data-mode="dark"] .hljs-title { color: #39bae6; }
+[data-theme="ayu"][data-mode="dark"] .hljs-type { color: #e6b450; }
+[data-theme="ayu"][data-mode="dark"] .hljs-tag { color: #ff8f40; }
+[data-theme="ayu"][data-mode="dark"] .hljs-name { color: #ff8f40; }
+[data-theme="ayu"][data-mode="dark"] .hljs-attr { color: #e6b450; }
+[data-theme="ayu"][data-mode="dark"] .hljs-variable { color: #f4005f; }
+[data-theme="ayu"][data-mode="dark"] .hljs-built_in { color: #39bae6; }
+[data-theme="ayu"][data-mode="dark"] .hljs-title.function_ { color: #39bae6; }
+[data-theme="ayu"][data-mode="dark"] .hljs-selector-tag { color: #ff8f40; }
+[data-theme="ayu"][data-mode="dark"] .hljs-selector-class { color: #e6b450; }
+[data-theme="ayu"][data-mode="dark"] .hljs-attribute { color: #e6b450; }
+
+/* ============================================
+   括号彩虹着色 - Ayu 亮色
+   ============================================ */
+[data-theme="ayu"][data-mode="light"] .bracket-color-1 { color: #ff6b6b; }
+[data-theme="ayu"][data-mode="light"] .bracket-color-2 { color: #86b300; }
+[data-theme="ayu"][data-mode="light"] .bracket-color-3 { color: #f4005f; }
+[data-theme="ayu"][data-mode="light"] .bracket-color-4 { color: #40a7ff; }
+[data-theme="ayu"][data-mode="light"] .bracket-color-5 { color: #e6b450; }
+[data-theme="ayu"][data-mode="light"] .bracket-color-6 { color: #39bae6; }
+
+/* 括号彩虹着色 - Ayu 暗色 */
+[data-theme="ayu"][data-mode="dark"] .bracket-color-1 { color: #ff8f40; }
+[data-theme="ayu"][data-mode="dark"] .bracket-color-2 { color: #aad94c; }
+[data-theme="ayu"][data-mode="dark"] .bracket-color-3 { color: #f4005f; }
+[data-theme="ayu"][data-mode="dark"] .bracket-color-4 { color: #39bae6; }
+[data-theme="ayu"][data-mode="dark"] .bracket-color-5 { color: #e6b450; }
+[data-theme="ayu"][data-mode="dark"] .bracket-color-6 { color: #ff6b6b; }
+
+/* Katex 公式样式 */
+[data-theme="ayu"] .katex { font-size: 1.1em; }
+[data-theme="ayu"][data-mode="light"] .katex { color: #333333; }
+[data-theme="ayu"][data-mode="dark"] .katex { color: #b3b1ad; }

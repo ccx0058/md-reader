@@ -1,0 +1,268 @@
+/* Gruvbox 风格主题 - 复古暖色调 */
+/* 亮色 */
+[data-theme="gruvbox"][data-mode="light"] {
+    --bg-primary: #fbf1c7;
+    --bg-secondary: #ebdbb2;
+    --bg-tertiary: #d5c4a1;
+    --text-primary: #3c3836;
+    --text-secondary: #665c54;
+    --text-muted: #928374;
+    --border-color: #d5c4a1;
+    --accent-color: #cc241d;
+    --code-bg: #faf3d8;
+    --blockquote-border: #cc241d;
+    --link-color: #458588;
+}
+
+/* 暗色 - Gruvbox Dark */
+[data-theme="gruvbox"][data-mode="dark"] {
+    --bg-primary: #282828;
+    --bg-secondary: #3c3836;
+    --bg-tertiary: #504945;
+    --text-primary: #ebdbb2;
+    --text-secondary: #a89984;
+    --text-muted: #928374;
+    --border-color: #504945;
+    --accent-color: #fb4934;
+    --code-bg: #1d2021;
+    --blockquote-border: #fb4934;
+    --link-color: #83a598;
+}
+
+/* Markdown 内容样式 */
+[data-theme="gruvbox"] .markdown-body {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text-primary);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 标题样式 */
+[data-theme="gruvbox"] .markdown-body h1,
+[data-theme="gruvbox"] .markdown-body h2,
+[data-theme="gruvbox"] .markdown-body h3,
+[data-theme="gruvbox"] .markdown-body h4,
+[data-theme="gruvbox"] .markdown-body h5,
+[data-theme="gruvbox"] .markdown-body h6 {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 28px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+}
+
+[data-theme="gruvbox"] .markdown-body h1 { 
+    font-size: 2em; 
+    border-bottom: 2px solid var(--border-color); 
+    padding-bottom: 0.35em;
+    margin-top: 0;
+}
+[data-theme="gruvbox"] .markdown-body h2 { 
+    font-size: 1.6em; 
+    border-bottom: 1px solid var(--border-color); 
+    padding-bottom: 0.25em;
+}
+[data-theme="gruvbox"] .markdown-body h3 { font-size: 1.35em; }
+[data-theme="gruvbox"] .markdown-body h4 { font-size: 1.15em; }
+[data-theme="gruvbox"] .markdown-body h5 { font-size: 1em; }
+[data-theme="gruvbox"] .markdown-body h6 { 
+    font-size: 0.9em; 
+    color: var(--text-muted); 
+}
+
+[data-theme="gruvbox"] .markdown-body p { 
+    margin-bottom: 18px; 
+    line-height: 1.8;
+}
+
+/* 链接 */
+[data-theme="gruvbox"] .markdown-body a { 
+    color: var(--link-color); 
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+[data-theme="gruvbox"] .markdown-body a:hover { 
+    border-bottom-color: var(--link-color);
+}
+
+/* 加粗和斜体 */
+[data-theme="gruvbox"] .markdown-body strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+[data-theme="gruvbox"] .markdown-body em {
+    font-style: italic;
+}
+
+/* 行内代码 */
+[data-theme="gruvbox"] .markdown-body code {
+    font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 0.9em;
+    padding: 0.25em 0.5em;
+    background-color: var(--code-bg);
+    border-radius: 4px;
+    color: #d65d0e;
+    border: 1px solid var(--border-color);
+}
+
+/* 代码块 */
+[data-theme="gruvbox"] .markdown-body pre {
+    font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+    font-size: 13px;
+    padding: 18px;
+    background-color: var(--code-bg);
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 18px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+[data-theme="gruvbox"] .markdown-body pre code { 
+    padding: 0; 
+    background: none; 
+    color: var(--text-primary);
+    border: none;
+}
+
+/* 引用块 */
+[data-theme="gruvbox"] .markdown-body blockquote {
+    margin: 0 0 18px 0;
+    padding: 12px 20px;
+    border-left: 4px solid var(--blockquote-border);
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary);
+    border-radius: 0 6px 6px 0;
+}
+[data-theme="gruvbox"] .markdown-body blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* 列表 */
+[data-theme="gruvbox"] .markdown-body ul, 
+[data-theme="gruvbox"] .markdown-body ol { 
+    padding-left: 1.8em; 
+    margin-bottom: 18px; 
+}
+[data-theme="gruvbox"] .markdown-body li { 
+    margin-top: 6px;
+    line-height: 1.7;
+}
+[data-theme="gruvbox"] .markdown-body li > ul,
+[data-theme="gruvbox"] .markdown-body li > ol {
+    margin-top: 6px;
+    margin-bottom: 0;
+}
+
+/* 表格 */
+[data-theme="gruvbox"] .markdown-body table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+[data-theme="gruvbox"] .markdown-body table th,
+[data-theme="gruvbox"] .markdown-body table td {
+    border: 1px solid var(--border-color);
+    padding: 10px 14px;
+    text-align: left;
+}
+[data-theme="gruvbox"] .markdown-body table th { 
+    background-color: var(--bg-secondary);
+    font-weight: 600;
+}
+[data-theme="gruvbox"] .markdown-body table tr:hover td {
+    background-color: var(--bg-secondary);
+}
+
+/* 分割线 */
+[data-theme="gruvbox"] .markdown-body hr { 
+    border: none; 
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+    margin: 28px 0; 
+}
+
+/* 图片 */
+[data-theme="gruvbox"] .markdown-body img { 
+    max-width: 100%; 
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* 任务列表 */
+[data-theme="gruvbox"] .markdown-body .task-list-item {
+    list-style-type: none;
+    margin-left: -1.5em;
+}
+[data-theme="gruvbox"] .markdown-body .task-list-item input {
+    margin-right: 0.5em;
+}
+
+/* ============================================
+   代码高亮 - Gruvbox 亮色
+   ============================================ */
+[data-theme="gruvbox"][data-mode="light"] .hljs { color: #3c3836; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-comment { color: #928374; font-style: italic; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-keyword { color: #cc241d; font-weight: 600; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-string { color: #98971a; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-number { color: #d65d0e; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-function { color: #458588; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-title { color: #458588; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-type { color: #b8bb26; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-tag { color: #cc241d; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-name { color: #cc241d; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-attr { color: #b16286; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-variable { color: #d65d0e; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-built_in { color: #8f3f71; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-title.function_ { color: #458588; }
+[data-theme="gruvbox"][data-mode="light"] .hljs-attribute { color: #b16286; }
+
+/* ============================================
+   代码高亮 - Gruvbox 暗色
+   ============================================ */
+[data-theme="gruvbox"][data-mode="dark"] .hljs { color: #ebdbb2; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-comment { color: #928374; font-style: italic; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-keyword { color: #fb4934; font-weight: 600; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-string { color: #b8bb26; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-number { color: #d3869b; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-function { color: #8ec07c; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-title { color: #8ec07c; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-type { color: #fabd2f; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-tag { color: #fb4934; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-name { color: #fb4934; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-attr { color: #fabd2f; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-variable { color: #d65d0e; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-built_in { color: #fe8019; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-title.function_ { color: #8ec07c; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-attribute { color: #fabd2f; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-selector-tag { color: #fb4934; }
+[data-theme="gruvbox"][data-mode="dark"] .hljs-selector-class { color: #fabd2f; }
+
+/* ============================================
+   括号彩虹着色 - Gruvbox 亮色
+   ============================================ */
+[data-theme="gruvbox"][data-mode="light"] .bracket-color-1 { color: #cc241d; }
+[data-theme="gruvbox"][data-mode="light"] .bracket-color-2 { color: #98971a; }
+[data-theme="gruvbox"][data-mode="light"] .bracket-color-3 { color: #d65d0e; }
+[data-theme="gruvbox"][data-mode="light"] .bracket-color-4 { color: #458588; }
+[data-theme="gruvbox"][data-mode="light"] .bracket-color-5 { color: #b16286; }
+[data-theme="gruvbox"][data-mode="light"] .bracket-color-6 { color: #8f3f71; }
+
+/* 括号彩虹着色 - Gruvbox 暗色 */
+[data-theme="gruvbox"][data-mode="dark"] .bracket-color-1 { color: #fb4934; }
+[data-theme="gruvbox"][data-mode="dark"] .bracket-color-2 { color: #b8bb26; }
+[data-theme="gruvbox"][data-mode="dark"] .bracket-color-3 { color: #d3869b; }
+[data-theme="gruvbox"][data-mode="dark"] .bracket-color-4 { color: #8ec07c; }
+[data-theme="gruvbox"][data-mode="dark"] .bracket-color-5 { color: #fabd2f; }
+[data-theme="gruvbox"][data-mode="dark"] .bracket-color-6 { color: #fe8019; }
+
+/* Katex 公式样式 */
+[data-theme="gruvbox"] .katex { font-size: 1.1em; }
+[data-theme="gruvbox"][data-mode="light"] .katex { color: #3c3836; }
+[data-theme="gruvbox"][data-mode="dark"] .katex { color: #ebdbb2; }
